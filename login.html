@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">-->    	
+    <title>login</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	
+</head>
+<body>
+
+
+<div class="wrapper">
+
+    <div class="container">
+    	<div class="login-regist">
+        	<div class="loginbtn login-regist-active">登录</div>
+        	<div class="registbtn">注册</div>
+        </div>
+        
+        <!--<h1>欢迎使用</h1>-->
+        <span class="error" style="color:red;">sfsd&nbsp;</span>
+        <div id="login">
+        	<form class="form" action="index.html" method="post">
+	            <input type="text" placeholder="用户名">
+	            <input type="password" placeholder="密码">
+	            <button type="submit" id="login-button">登录</button>
+	        </form>
+        </div>
+        <div id="regist">
+        	<form class="form" action="">
+	            <input type="text" placeholder="用户名">
+	            <input type="password" placeholder="密码">
+	            <input type="password" placeholder="确认密码">
+	            <input type="email" placeholder="邮箱">
+	            <button type="submit" id="regist-button">注册</button>
+	        </form>
+        </div>
+        
+    </div>
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+//  $('#login-button').click(function(event){
+//      event.preventDefault();
+//      $('form').fadeOut(500);
+//      $('.wrapper').addClass('form-success');
+//  });
+    $(function(){
+	    $("#regist").hide();
+	    $(".loginbtn").on("click",function(){
+	    	$(this).addClass("login-regist-active").siblings().removeClass("login-regist-active");
+	    	$("#regist").hide().siblings().show();
+	    });
+	    $(".registbtn").on("click",function(){
+	    	$(this).addClass("login-regist-active").siblings().removeClass("login-regist-active");
+	    	$("#login").hide().siblings().show();
+	    });
+	    
+    });
+</script>
+
+</body>
+</html>
